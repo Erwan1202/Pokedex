@@ -1,12 +1,20 @@
 <template>
-  <div class="min-h-screen">
-    <header class="px-6 py-4 flex items-center justify-between bg-white shadow-md sticky top-0 z-50">
-      <RouterLink to="/" class="font-extrabold text-2xl text-brand-yellow">Pokédex</RouterLink>
-      <nav class="flex gap-6 text-gray-700 font-semibold">
-        <RouterLink to="/" class="hover:text-brand-yellow transition">Home</RouterLink>
-        <RouterLink to="/pokedex" class="hover:text-brand-yellow transition">Pokédex</RouterLink>
+  <div class="min-h-screen bg-yellow-400">
+    <header class="px-8 py-6 flex items-center justify-between">
+      <div class="flex items-center">
+        <!-- Logo Pokémon officiel -->
+        <img src="./assets/Logo.png" alt="Pokémon" class="h-12" />
+      </div>
+      <nav class="flex gap-12 text-lg font-semibold">
+        <RouterLink to="/" class="text-gray-900 hover:text-gray-700 transition-colors duration-200 relative">
+          Home
+          <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-900 transform origin-left transition-transform duration-200"></div>
+        </RouterLink>
+        <RouterLink to="/pokedex" class="text-gray-900 hover:text-gray-700 transition-colors duration-200 relative">
+          Pokédex
+        </RouterLink>
       </nav>
     </header>
-    <main class="px-6"><RouterView /></main>
+    <main><RouterView /></main>
   </div>
 </template>
