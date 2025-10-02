@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "name": "Bulbasaur",
+    "types": ["Grass", "Poison"],
+    "height": 0.7,
+    "weight": 6.9,
+    "abilities": ["Overgrow", "Chlorophyll"],
+    "sprite": "/sprites/bulbasaur.png",
+    "color": "#74CB48"
+  },
+  {
+    "id": 4,
+    "name": "Charmander",
+    "types": ["Fire"],
+    "height": 0.6,
+    "weight": 8.5,
+    "abilities": ["Blaze", "Solar Power"],
+    "sprite": "/sprites/charmander.png",
+    "color": "#F57D31"
+  },
+  {
+    "id": 7,
+    "name": "Squirtle",
+    "types": ["Water"],
+    "height": 0.5,
+    "weight": 9.0,
+    "abilities": ["Torrent", "Rain Dish"],
+    "sprite": "/sprites/squirtle.png",
+    "color": "#6493EB"
+  },
+  {
+    "id": 25,
+    "name": "Pikachu",
+    "types": ["Electric"],
+    "height": 0.4,
+    "weight": 6.0,
+    "abilities": ["Static", "Lightning Rod"],
+    "sprite": "/sprites/pikachu.png",
+    "color": "#F9CF30"
+  },
+  {
+    "id": 39,
+    "name": "Jigglypuff",
+    "types": ["Normal", "Fairy"],
+    "height": 0.5,
+    "weight": 5.5,
+    "abilities": ["Cute Charm", "Competitive"],
+    "sprite": "/sprites/jigglypuff.png",
+    "color": "#E79AA8"
+  },
+  {
+    "id": 52,
+    "name": "Meowth",
+    "types": ["Normal"],
+    "height": 0.4,
+    "weight": 4.2,
+    "abilities": ["Pickup", "Technician"],
+    "sprite": "/sprites/meowth.png",
+    "color": "#AAA67F"
+  },
+  {
+    "id": 54,
+    "name": "Psyduck",
+    "types": ["Water"],
+    "height": 0.8,
+    "weight": 19.6,
+    "abilities": ["Damp", "Cloud Nine"],
+    "sprite": "/sprites/psyduck.png",
+    "color": "#A7B723"
+  },
+  {
+    "id": 133,
+    "name": "Eevee",
+    "types": ["Normal"],
+    "height": 0.3,
+    "weight": 6.5,
+    "abilities": ["Run Away", "Adaptability"],
+    "sprite": "/sprites/eevee.png",
+    "color": "#C3B091"
+  },
+  {
+    "id": 143,
+    "name": "Snorlax",
+    "types": ["Normal"],
+    "height": 2.1,
+    "weight": 460.0,
+    "abilities": ["Immunity", "Thick Fat"],
+    "sprite": "/sprites/snorlax.png",
+    "color": "#A8A77A"
+  }
+]
+
