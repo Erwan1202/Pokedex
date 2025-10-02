@@ -1,6 +1,1 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root { --bg: #fffdf5; }
-body { @apply font-sans bg-grayBg; }
+:root { --bg: #f1ca2c; }
