@@ -3,4 +3,4 @@
 @tailwind utilities;
 
 :root { --bg: #fffdf5; }
-body { background: var(--bg); }
+body { @apply font-sans bg-grayBg; }

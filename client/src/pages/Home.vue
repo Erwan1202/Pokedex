@@ -10,6 +10,6 @@
         See pokemons
       </RouterLink>
     </div>
-    <!--<img src="/pikachu-hero.png" class="w-full max-w-md mx-auto" alt="Pikachu" />-->
+    <img src="../assets/pikachu-hero.png" class="w-full max-w-md mx-auto" alt="Pikachu" />
   </section>
 </template>
