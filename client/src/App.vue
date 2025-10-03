@@ -4,7 +4,7 @@
     <header v-if="route.name !== 'NotFound'" class="px-8 py-6 flex items-center justify-between">
       <div class="flex items-center">
         <!-- Logo Pokémon officiel -->
-        <img src="./assets/Logo.png" alt="Pokémon" class="h-12" />
+        <img src="./assets/Header_assets/Logo.png" alt="Pokémon" class="h-12" />
       </div>
       <nav class="flex gap-12 text-lg font-semibold">
         <RouterLink to="/" class="text-gray-900 hover:text-gray-700 transition-colors duration-200 relative">

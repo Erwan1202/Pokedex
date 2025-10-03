@@ -2,10 +2,10 @@
   <section class="min-h-screen bg-yellow-400 relative overflow-hidden">
     <!-- Nuages d'arrière-plan -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <img src="../assets/clouds.png" alt="clouds" class="absolute top-20 left-10 w-32 opacity-30" />
-      <img src="../assets/clouds.png" alt="clouds" class="absolute top-40 right-20 w-24 opacity-20" />
-      <img src="../assets/clouds.png" alt="clouds" class="absolute bottom-32 left-1/4 w-28 opacity-25" />
-      <img src="../assets/clouds.png" alt="clouds" class="absolute bottom-60 right-10 w-20 opacity-15" />
+      <img src="../assets/Home_page_assets/clouds.png" alt="clouds" class="absolute top-20 left-10 w-32 opacity-30" />
+      <img src="../assets/Home_page_assets/clouds.png" alt="clouds" class="absolute top-40 right-20 w-24 opacity-20" />
+      <img src="../assets/Home_page_assets/clouds.png" alt="clouds" class="absolute bottom-32 left-1/4 w-28 opacity-25" />
+      <img src="../assets/Home_page_assets/clouds.png" alt="clouds" class="absolute bottom-60 right-10 w-20 opacity-15" />
     </div>
 
     <!-- Contenu principal -->
@@ -33,20 +33,20 @@
         <div class="relative flex justify-center items-center">
           <!-- Pokéballs flottantes -->
           <div class="absolute top-0 right-10 z-20 animate-float">
-            <img src="../assets/Pokeball1.png" alt="pokeball" class="w-20 h-20" />
+            <img src="../assets/Home_page_assets/Pokeball1.png" alt="pokeball" class="w-20 h-20" />
           </div>
           
           <div class="absolute top-20 left-0 z-20 animate-float-delayed">
-            <img src="../assets/Pokeball2.png" alt="pokeball" class="w-16 h-16" />
+            <img src="../assets/Home_page_assets/Pokeball2.png" alt="pokeball" class="w-16 h-16" />
           </div>
 
           <div class="absolute bottom-10 right-5 z-20 animate-float-slow">
-            <img src="../assets/Pokeball1.png" alt="pokeball" class="w-14 h-14" />
+            <img src="../assets/Home_page_assets/Pokeball1.png" alt="pokeball" class="w-14 h-14" />
           </div>
           
           <!-- Pikachu principal -->
           <div class="relative z-30 transform scale-110">
-            <img src="../assets/pikachu-hero.png" alt="Pikachu" class="w-full max-w-lg drop-shadow-2xl" />
+            <img src="../assets/Home_page_assets/pikachu-hero.png" alt="Pikachu" class="w-full max-w-lg drop-shadow-2xl" />
           </div>
         </div>
       </div>
