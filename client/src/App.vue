@@ -1,6 +1,7 @@
 <template>
   <div class="min-h-screen bg-yellow-400">
-    <header class="px-8 py-6 flex items-center justify-between">
+    <!-- Header masqué uniquement sur la page NotFound -->
+    <header v-if="$route.name !== 'NotFound'" class="px-8 py-6 flex items-center justify-between">
       <div class="flex items-center">
         <!-- Logo Pokémon officiel -->
         <img src="./assets/Logo.png" alt="Pokémon" class="h-12" />
