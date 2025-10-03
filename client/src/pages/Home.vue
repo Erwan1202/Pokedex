@@ -7,34 +7,38 @@
     <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 h-full">
       <div class="grid grid-cols-12 gap-8 items-center h-full py-8">
         <!-- TEXTE -->
-        <div class="col-span-12 lg:col-span-5">
-          <h1 class="text-black leading-[1.05] tracking-wide">
-            <span class="block text-[40px] sm:text-[48px] lg:text-[52px] font-semibold">Find</span>
-            <span class="block mt-1 text-[28px] sm:text-[32px] lg:text-[36px] font-medium">all your</span>
-            <span class="block mt-1 text-[28px] sm:text-[32px] lg:text-[36px] font-medium">favorite</span>
-            <span class="block mt-2 text-[40px] sm:text-[48px] lg:text-[52px] font-semibold">Pokemon</span>
-          </h1>
+        <div class="col-span-12 lg:col-span-5 flex flex-col justify-center">
+          <div class="space-y-8">
+            <!-- Titre principal -->
+            <h1 class="text-black tracking-[4px]" style="font-family: 'Karia', sans-serif;">
+              <span class="block text-[72px] leading-[72px]" style="font-weight: 700;">Find</span>
+              <span class="block text-[72px] leading-[72px]" style="font-weight: 400;">all your favorite</span>
+              <span class="block text-[72px] leading-[72px]" style="font-weight: 700;">Pokemon</span>
+            </h1>
 
-          <p class="mt-4 max-w-md text-[16px] leading-relaxed text-black/90">
-            You can know the type of Pokemon, its strengths, disadvantages and abilities
-          </p>
+            <!-- Paragraphe descriptif -->
+            <p class="text-[32px] leading-[36px] text-black max-w-[515px]" 
+               style="font-family: 'Karia', sans-serif; font-weight: 400; letter-spacing: 0%;">
+              You can know the type of Pokemon, its strengths, disadvantages and abilities
+            </p>
 
-          <RouterLink
-            to="/pokedex"
-            class="group relative mt-6 inline-block"
-          >
-            <!-- socle sombre (effet bouton 3D) -->
-            <span class="absolute inset-x-0 -bottom-2 h-2 rounded-lg bg-black/25"></span>
-            <span
-              class="relative inline-block rounded-lg bg-emerald-400 px-7 py-3 text-white text-[17px] font-semibold shadow-lg transition-all duration-200 group-hover:translate-y-[-1px] group-active:translate-y-[1px]"
+            <!-- Bouton -->
+            <RouterLink
+              to="/pokedex"
+              class="group relative inline-block w-[231px] h-[66px]"
             >
-              See pokemons
-            </span>
-          </RouterLink>
+              <span
+                class="flex items-center justify-center w-full h-full rounded-[11px] text-[23px] font-bold transition-all duration-200 group-hover:translate-y-[-1px] group-active:translate-y-[1px]"
+                style="background-color: #73D677; color: #212121; font-family: 'Karia', sans-serif; font-weight: 700; box-shadow: inset 0 -9px 0 rgba(0, 0, 0, 0.18);"
+              >
+                See pokemons
+              </span>
+            </RouterLink>
+          </div>
         </div>
 
         <!-- ILLUSTRATION -->
-        <div class="col-span-12 lg:col-span-7 relative h-[400px] lg:h-[450px]">
+        <div class="col-span-12 lg:col-span-7 relative h-[350px] lg:h-[400px] max-w-[516px] max-h-[557px]">
           <!-- Nuages en arrière-plan -->
           <img src="../assets/Home_page_assets/clouds.png" alt="clouds" class="absolute top-0 left-1/2 w-[120%] max-w-none -translate-x-1/2 z-10" />
           
