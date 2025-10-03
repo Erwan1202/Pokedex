@@ -88,7 +88,6 @@
 <script setup>
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { ref } from 'vue'
 
 const route = useRoute()
 const isMobileMenuOpen = ref(false)
