@@ -1,31 +1,32 @@
 <template>
   <div class="min-h-screen bg-[#F5DB13]">
-    <!-- Header professionnel Pokémon avec ombres et espacement précis -->
-    <header v-if="route.name !== 'NotFound'" class="relative bg-[#F5DB13] shadow-[0_4px_8px_rgba(0,0,0,0.15)] border-b border-[#E6C200]">
+    <!-- Header -->
+    <header v-if="route.name !== 'NotFound'" class="relative bg-[#F5DB13] shadow-[00px_4px_6px_rgba(0,0,0,0.1)] border-b border-[#E6C200]">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="flex items-center justify-center h-20 relative">
-          <!-- Logo container avec espacement précis - positionné à gauche -->
-          <div class="absolute left-0 flex items-center space-x-4">
-            <div class="flex-shrink-0 transform hover:scale-105 transition-transform duration-300 ease-in-out">
-              <!-- Logo Pokémon avec taille optimisée et ombre -->
+        <div class="flex items-center justify-center h-[93px] relative">
+          <!-- Logo container -->
+          <div class="absolute left-0 flex items-center">
+            <div class="flex-shrink-0 transform hover:scale-105 transition-transform duration-300 ease-in-out" style="margin-top: 14px;">
+              <!-- Logo Pokémon -->
               <img 
                 src="./assets/Header_assets/Logo.png" 
                 alt="Pokémon" 
-                class="h-16 w-auto drop-shadow-lg filter brightness-100 contrast-105" 
+                class="drop-shadow-lg filter brightness-100 contrast-105" 
+                style="width: 157px; height: 63px;"
               />
             </div>
           </div>
           
-          <!-- Navigation centrée avec espacement et effets précis -->
+          <!-- Navigation -->
           <nav class="hidden md:flex items-center space-x-8">
             <RouterLink 
               to="/" 
               class="relative px-4 py-2 text-xl font-bold text-gray-900 hover:text-gray-700 transition-all duration-300 ease-in-out group"
             >
               <span class="relative z-10">Home</span>
-              <!-- Ligne de soulignement animée -->
+              <!-- Ligne -->
               <div class="absolute bottom-0 left-0 right-0 h-1 bg-gray-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left rounded-full"></div>
-              <!-- Ombre subtile au hover -->
+              <!-- Ombre  -->
               <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-lg"></div>
             </RouterLink>
             
@@ -34,9 +35,9 @@
               class="relative px-4 py-2 text-xl font-bold text-gray-900 hover:text-gray-700 transition-all duration-300 ease-in-out group"
             >
               <span class="relative z-10">Pokédex</span>
-              <!-- Ligne de soulignement animée -->
+              <!-- Ligne -->
               <div class="absolute bottom-0 left-0 right-0 h-1 bg-gray-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left rounded-full"></div>
-              <!-- Ombre subtile au hover -->
+              <!-- Ombre  -->
               <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-lg"></div>
             </RouterLink>
           </nav>
@@ -52,8 +53,7 @@
         </div>
       </div>
       
-      <!-- Ombre subtile en bas du header -->
-      <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-[#E6C200] opacity-60"></div>
+      
     </header>
     <main><RouterView /></main>
   </div>
