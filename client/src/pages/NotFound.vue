@@ -1,38 +1,49 @@
 <template>
-  <section class="grid place-items-center h-screen bg-red-500 relative overflow-hidden">
-    <!-- Image de fond 404 -->
+  <section
+    class="relative grid place-items-center min-h-screen overflow-hidden bg-[#D93E30]"
+  >
+    <!-- 404 en arrière-plan-->
     <div class="absolute inset-0 flex items-center justify-center">
-      <img 
-        src="../assets/NotFound_page_assets/404.png" 
-        alt="404" 
-        class="w-auto h-96 opacity-20"
-      >
+      <img
+        src="../assets/NotFound_page_assets/404.png"
+        alt="404"
+        class="pointer-events-none select-none
+               w-[1200px] max-w-[85vw] h-auto opacity-200"
+      />
     </div>
-    
-    <!-- Contenu principal -->
-    <div class="relative z-10 text-center text-white">
-      <!-- Image Team Rocket -->
-      <div class="mb-8">
-        <img 
-          src="../assets/NotFound_page_assets/team_rocket.png" 
-          alt="Team Rocket" 
-          class="w-80 h-auto mx-auto"
-        >
+
+    <!-- Contenu au premier plan -->
+    <div class="relative z-10 text-center px-4">
+      <!-- Team Rocket-->
+      <div class="mb-10">
+        <img
+          src="../assets/NotFound_page_assets/team_rocket.png"
+          alt="Team Rocket"
+          class="mx-auto h-auto
+                 w-[520px] md:w-[560px] lg:w-[600px] max-w-[80vw]"
+        />
       </div>
-      
-      <!-- Texte -->
-      <div class="mb-8">
-        <h1 class="text-4xl font-bold text-white mb-4">
-          The rocket team has won this time.
-        </h1>
-      </div>
-      
-      <!-- Bouton Return -->
-      <RouterLink 
-        to="/" 
-        class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-3 rounded-lg transition-colors duration-200"
+
+      <!-- Titre -->
+      <h1
+        class="font-karla leading-tight mb-10
+               text-3xl md:text-4xl lg:text-5xl"
       >
-        Return
+        <span class="text-white">The rocket team </span>
+        <span class="text-black">has won this time.</span>
+      </h1>
+
+      <!-- Bouton retour-->
+      <RouterLink to="/" class="inline-block">
+        <span
+          class="inline-flex items-center justify-center
+                 px-10 py-3 rounded-xl font-karla font-bold text-black
+                 bg-[linear-gradient(0deg,#F2B807_0%,#F5DB13_100%)]
+                 shadow-[inset_0_-6px_0_rgba(0,0,0,0.18)]
+                 transition-transform duration-150 hover:-translate-y-[1px] active:translate-y-[1px]"
+        >
+          Return
+        </span>
       </RouterLink>
     </div>
   </section>
