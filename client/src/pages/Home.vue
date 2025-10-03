@@ -1,59 +1,88 @@
 <template>
   <!-- HERO -->
-  <section class="relative isolate overflow-hidden h-[calc(100vh-80px)] bg-[linear-gradient(0deg,#F2B807_50%,#F5DB13_100%)]">
-    <!-- léger dégradé/halo comme sur la maquette -->
-    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_600px_at_70%_60%,rgba(0,0,0,0.15),transparent_60%)]"></div>
-    <!-- CONTENU -->
-    <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 h-full">
-      <div class="grid grid-cols-12 gap-8 items-center h-full py-8">
-        <!-- TEXTE -->
-        <div class="col-span-12 lg:col-span-5 flex flex-col justify-center">
-          <div class="space-y-8">
-            <!-- Titre principal -->
-            <h1 class="text-black tracking-[4px]" style="font-family: 'Karia', sans-serif;">
-              <span class="block text-[72px] leading-[72px]" style="font-weight: 700;">Find</span>
-              <span class="block text-[72px] leading-[72px]" style="font-weight: 400;">all your favorite</span>
-              <span class="block text-[72px] leading-[72px]" style="font-weight: 700;">Pokemon</span>
-            </h1>
-
-            <!-- Paragraphe descriptif -->
-            <p class="text-[32px] leading-[36px] text-black max-w-[515px]" 
-               style="font-family: 'Karia', sans-serif; font-weight: 400; letter-spacing: 0%;">
-              You can know the type of Pokemon, its strengths, disadvantages and abilities
-            </p>
-
-            <!-- Bouton -->
-            <RouterLink
-              to="/pokedex"
-              class="group relative inline-block w-[231px] h-[66px]"
-            >
-              <span
-                class="flex items-center justify-center w-full h-full rounded-[11px] text-[23px] font-bold transition-all duration-200 group-hover:translate-y-[-1px] group-active:translate-y-[1px]"
-                style="background-color: #73D677; color: #212121; font-family: 'Karia', sans-serif; font-weight: 700; box-shadow: inset 0 -9px 0 rgba(0, 0, 0, 0.18);"
-              >
-                See pokemons
-              </span>
-            </RouterLink>
-          </div>
-        </div>
-
-        <!-- ILLUSTRATION -->
-        <div class="col-span-12 lg:col-span-7 relative h-[350px] lg:h-[400px] max-w-[516px] max-h-[557px]">
-          <!-- Nuages en arrière-plan -->
-          <img src="../assets/Home_page_assets/clouds.png" alt="clouds" class="absolute top-0 left-1/2 w-[120%] max-w-none -translate-x-1/2 z-10" />
-          
-          <!-- Pokeball au second plan -->
-          <img src="../assets/Home_page_assets/Pokeball1.png" alt="pokeball" class="absolute top-0 left-0 w-16 sm:w-32 lg:w-40 z-20 " />
-
-          <!-- Personnage -->
-          <img src="../assets/Home_page_assets/pikachu-hero.png" alt="character" class="absolute bottom-0 left-1/2 w-[90%] max-w-none -translate-x-1/2 z-30" />
-
-          <!-- Pokeball au premier plan -->
-          <img src="../assets/Home_page_assets/Pokeball2.png" alt="pokeball" class="absolute bottom-[55%] right-[-120px] w-24 sm:w-32 lg:w-36 z-30 " />
-        </div>
+  <section
+    class="relative isolate overflow-hidden h-[calc(100vh-80px)]
+           bg-[linear-gradient(0deg,#F2B807_50%,#F5DB13_100%)]"
+    aria-label="Hero Pokémon"
+  >
+    <!-- halo/dégradé -->
+    <div
+      class="pointer-events-none absolute inset-0
+             bg-[radial-gradient(1200px_600px_at_70%_60%,rgba(0,0,0,0.15),transparent_60%)]">
     </div>
-  </div>
+
+    <!-- CONTENU -->
+    <div class="relative z-40 h-full">
+      <!-- === Bloc TEXTE (positions & tailles Figma) === -->
+      <div class="absolute left-[160px] top-[166px] w-[515px]">
+        <!-- Titre sur 4 lignes -->
+        <h1
+          class="font-karla text-black tracking-[4px] leading-[1] antialiased w-[506px]"
+        >
+          <span class="block text-[72px] font-bold">Find</span>
+          <span class="block text-[72px] font-normal">all your</span>
+          <span class="block text-[72px] font-normal">favorite</span>
+          <span class="block text-[72px] font-bold">Pokemon</span>
+        </h1>
+
+        <!-- Paragraphe : 32px sous le titre -->
+        <p
+          class="mt-[32px] font-karla text-[32px] font-normal leading-[1] text-black w-[515px]"
+        >
+          You can know the type of Pokemon, its strengths, disadvantages and abilities
+        </p>
+
+        <!-- CTA : 32px sous le paragraphe -->
+        <RouterLink to="/pokedex" class="inline-block mt-[32px]">
+          <span
+            class="inline-flex items-center justify-center
+                   w-[180px] h-[48px] rounded-[10px]
+                   font-karla text-[18px] font-bold
+                   bg-[#73D677] text-[#212121]
+                   shadow-[inset_0_-6px_0_rgba(0,0,0,0.18)]
+                   transition-transform duration-200
+                   hover:-translate-y-[1px] active:translate-y-[1px]"
+          >
+            See pokemons
+          </span>
+        </RouterLink>
+      </div>
+
+      <!-- ILLUSTRATION -->
+      <div class="absolute right-0 top-0 w-[793px] h-[680px] max-w-full">
+        <!-- Nuages -->
+        <img
+          src="../assets/Home_page_assets/clouds.png"
+          alt="Clouds"
+          class="absolute z-10
+                 w-[684.82px] h-[432.64px]
+                 top-[20.69px] left-[31.98px]" />
+
+        <!-- Pokéball arrière-plan -->
+        <img
+          src="../assets/Home_page_assets/Pokeball1.png"
+          alt="Pokeball"
+          class="absolute z-20
+                 w-[166.97px] h-[167.55px]
+                 top-[70px] left-[69.61px]
+                 -rotate-[5deg] opacity-90" />
+
+        <!-- Pikachu -->
+        <img
+          src="../assets/Home_page_assets/pikachu-hero.png"
+          alt="Pikachu"
+          class="absolute z-30
+                 w-[647.31px] h-[647.2px]
+                 top-[30.1px] left-1/2 -translate-x-1/2" />
+
+        <!-- Pokéball avant-plan -->
+        <img
+          src="../assets/Home_page_assets/Pokeball2.png"
+          alt="Pokeball big"
+          class="absolute z-30
+                 w-[250px] h-[316.96px]
+                 left-[600px]" />
+      </div>
+    </div>
   </section>
 </template>
-
-
