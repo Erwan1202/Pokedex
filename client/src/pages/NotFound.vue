@@ -1,5 +1,5 @@
 <template>
-  <section class="grid place-items-center h-screen bg-red-500 relative overflow-hidden">
+  <section class="grid place-items-center h-screen bg-[#D93E30] relative overflow-hidden">
     <!-- Image de fond 404 -->
     <div class="absolute inset-0 flex items-center justify-center">
       <img 
