@@ -8,7 +8,7 @@
     <!-- halo/dégradé -->
     <div
       class="pointer-events-none absolute inset-0
-             bg-[radial-gradient(1200px_600px_at_70%_60%,rgba(0,0,0,0.15),transparent_60%)]">
+         bg-[radial-gradient(1200px_600px_at_70%_60%,rgba(0,0,0,0.15),transparent_60%)]">
     </div>
 
     <!-- CONTENU -->
