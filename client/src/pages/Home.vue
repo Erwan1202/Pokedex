@@ -19,20 +19,19 @@
         <h1
           class="font-karla text-black tracking-[4px] leading-[1] antialiased w-[506px]"
         >
-          <span class="block text-[72px] font-bold">Find</span>
-          <span class="block text-[72px] font-normal">all your</span>
-          <span class="block text-[72px] font-normal">favorite</span>
+          <span class="text-[72px] font-bold mr-7">Find</span>
+          <span class="text-[72px] font-normal">all your favorite</span>
           <span class="block text-[72px] font-bold">Pokemon</span>
         </h1>
 
-        <!-- Paragraphe : 32px sous le titre -->
+        <!-- Paragraphe -->
         <p
           class="mt-[32px] font-karla text-[32px] font-normal leading-[1] text-black w-[515px]"
         >
           You can know the type of Pokemon, its strengths, disadvantages and abilities
         </p>
 
-        <!-- CTA : 32px sous le paragraphe -->
+        <!-- button pokedex-->
         <RouterLink to="/pokedex" class="inline-block mt-[32px]">
           <span
             class="inline-flex items-center justify-center
@@ -80,8 +79,8 @@
           src="../assets/Home_page_assets/Pokeball2.png"
           alt="Pokeball big"
           class="absolute z-30
-                 w-[250px] h-[316.96px]
-                 left-[600px]" />
+                 w-[300px] h-[316.96px]
+                 left-[605px]" />
       </div>
     </div>
   </section>
