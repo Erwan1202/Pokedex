@@ -1,136 +1,55 @@
 <template>
-  <section class="min-h-screen bg-yellow-400 relative overflow-hidden">
-    <!-- Nuages d'arrière-plan -->
-    <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <img src="../assets/Home_page_assets/clouds.png" alt="clouds" class="absolute top-20 left-10 w-32 opacity-30" />
-      <img src="../assets/Home_page_assets/clouds.png" alt="clouds" class="absolute top-40 right-20 w-24 opacity-20" />
-      <img src="../assets/Home_page_assets/clouds.png" alt="clouds" class="absolute bottom-32 left-1/4 w-28 opacity-25" />
-      <img src="../assets/Home_page_assets/clouds.png" alt="clouds" class="absolute bottom-60 right-10 w-20 opacity-15" />
-    </div>
-
-    <!-- Contenu principal -->
-    <div class="container mx-auto px-8 py-16 relative z-10">
-      <div class="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
-        <!-- Contenu texte à gauche -->
-        <div class="space-y-8">
-          <h1 class="text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
-            Find all your favorite 
-            <span class="block">Pokemon</span>
+  <!-- HERO -->
+  <section class="relative isolate overflow-hidden min-h-[720px] bg-[linear-gradient(0deg,#F2B807_50%,#F5DB13_100%)]">
+    <!-- léger dégradé/halo comme sur la maquette -->
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_600px_at_70%_60%,rgba(0,0,0,0.15),transparent_60%)]"></div>
+    <!-- CONTENU -->
+    <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-8 items-center pt-16 lg:pt-24 pb-24">
+        <!-- TEXTE -->
+        <div class="col-span-12 lg:col-span-5">
+          <h1 class="text-black leading-[1.05] tracking-wide">
+            <span class="block text-[56px] sm:text-[64px] lg:text-[70px] font-semibold">Find</span>
+            <span class="block mt-1 text-[40px] sm:text-[46px] lg:text-[50px] font-medium">all your</span>
+            <span class="block mt-1 text-[40px] sm:text-[46px] lg:text-[50px] font-medium">favorite</span>
+            <span class="block mt-2 text-[56px] sm:text-[64px] lg:text-[70px] font-semibold">Pokemon</span>
           </h1>
-          
-          <p class="text-xl text-gray-800 max-w-lg leading-relaxed font-medium">
+
+          <p class="mt-6 max-w-md text-[18px] leading-relaxed text-black/90">
             You can know the type of Pokemon, its strengths, disadvantages and abilities
           </p>
-          
-          <RouterLink 
+
+          <RouterLink
             to="/pokedex"
-            class="inline-block bg-green-500 text-white font-bold text-lg px-10 py-4 rounded-lg shadow-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-105">
-            See pokemons
+            class="group relative mt-8 inline-block"
+          >
+            <!-- socle sombre (effet bouton 3D) -->
+            <span class="absolute inset-x-0 -bottom-2 h-2 rounded-lg bg-black/25"></span>
+            <span
+              class="relative inline-block rounded-lg bg-emerald-400 px-7 py-3 text-white text-[17px] font-semibold shadow-lg transition-all duration-200 group-hover:translate-y-[-1px] group-active:translate-y-[1px]"
+            >
+              See pokemons
+            </span>
           </RouterLink>
         </div>
 
-        <!-- Illustration à droite -->
-        <div class="relative flex justify-center items-center">
-          <!-- Pokéballs flottantes -->
-          <div class="absolute top-0 right-10 z-20 animate-float">
-            <img src="../assets/Home_page_assets/Pokeball1.png" alt="pokeball" class="w-20 h-20" />
-          </div>
+        <!-- ILLUSTRATION -->
+        <div class="col-span-12 lg:col-span-7 relative h-[540px] lg:h-[600px]">
+          <!-- Nuages en arrière-plan -->
+          <img src="../assets/Home_page_assets/clouds.png" alt="clouds" class="absolute top-0 left-1/2 w-[120%] max-w-none -translate-x-1/2 z-10" />
           
-          <div class="absolute top-20 left-0 z-20 animate-float-delayed">
-            <img src="../assets/Home_page_assets/Pokeball2.png" alt="pokeball" class="w-16 h-16" />
-          </div>
+          <!-- Pokeball au second plan -->
+          <img src="../assets/Home_page_assets/Pokeball1.png" alt="pokeball" class="absolute top left w-20 sm:w-48 lg:w-56 z-20 " />
 
-          <div class="absolute bottom-10 right-5 z-20 animate-float-slow">
-            <img src="../assets/Home_page_assets/Pokeball1.png" alt="pokeball" class="w-14 h-14" />
-          </div>
-          
-          <!-- Pikachu principal -->
-          <div class="relative z-30 transform scale-110">
-            <img src="../assets/Home_page_assets/pikachu-hero.png" alt="Pikachu" class="w-full max-w-lg drop-shadow-2xl" />
-          </div>
+          <!-- Personnage -->
+          <img src="../assets/Home_page_assets/pikachu-hero.png" alt="character" class="absolute bottom-0 left-1/2 w-[100%] max-w-none -translate-x-1/2 z-30" />
+
+          <!-- Pokeball au premier plan -->
+          <img src="../assets/Home_page_assets/Pokeball2.png" alt="pokeball" class="absolute bottom-[55%] right-[-155px] w-32 sm:w-40 lg:w-48 z-30 " />
         </div>
-      </div>
     </div>
-
-    <!-- Cercles décoratifs flottants -->
-    <div class="absolute top-1/4 right-1/3 w-32 h-32 bg-orange-300 rounded-full opacity-20 animate-pulse"></div>
-    <div class="absolute bottom-1/3 left-1/4 w-24 h-24 bg-red-300 rounded-full opacity-15 animate-pulse-delayed"></div>
-    <div class="absolute top-1/2 left-10 w-16 h-16 bg-blue-300 rounded-full opacity-25 animate-pulse-slow"></div>
+  </div>
   </section>
 </template>
 
-<style scoped>
-/* Animations personnalisées */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(10deg);
-  }
-}
 
-@keyframes float-delayed {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-15px) rotate(-8deg);
-  }
-}
-
-@keyframes float-slow {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-10px) rotate(5deg);
-  }
-}
-
-@keyframes pulse-delayed {
-  0%, 100% {
-    opacity: 0.15;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.3;
-    transform: scale(1.1);
-  }
-}
-
-@keyframes pulse-slow {
-  0%, 100% {
-    opacity: 0.25;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.4;
-    transform: scale(1.05);
-  }
-}
-
-.animate-float {
-  animation: float 4s ease-in-out infinite;
-}
-
-.animate-float-delayed {
-  animation: float-delayed 3.5s ease-in-out infinite;
-  animation-delay: 1s;
-}
-
-.animate-float-slow {
-  animation: float-slow 5s ease-in-out infinite;
-  animation-delay: 2s;
-}
-
-.animate-pulse-delayed {
-  animation: pulse-delayed 3s ease-in-out infinite;
-  animation-delay: 1s;
-}
-
-.animate-pulse-slow {
-  animation: pulse-slow 4s ease-in-out infinite;
-  animation-delay: 2s;
-}
-</style>
