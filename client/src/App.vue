@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-[#F5DB13]">
     <!-- Header -->
-    <header v-if="route.name !== 'NotFound'" class="relative bg-[#F5DB13] shadow-[0_4px_8px_rgba(0,0,0,0.15)] border-b border-[#E6C200]">
+    <header v-if="route.name !== 'NotFound'" class="relative bg-[#F5DB13] shadow-[00px_4px_6px_rgba(0,0,0,0.1)] border-b border-[#E6C200]">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="flex items-center justify-center h-[93px] relative">
           <!-- Logo container -->
@@ -53,8 +53,7 @@
         </div>
       </div>
       
-      <!-- Ombre en bas du header -->
-      <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-[#E6C200] opacity-60"></div>
+      
     </header>
     <main><RouterView /></main>
   </div>
