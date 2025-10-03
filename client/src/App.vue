@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-[#F5DB13]">
     <!-- Header -->
-    <header v-if="route.name !== 'NotFound'" class="relative bg-[#F5DB13] shadow-[00px_4px_6px_rgba(0,0,0,0.1)] border-b border-[#E6C200]">
+    <header v-if="route.name !== 'NotFound'" class="relative bg-[#F5DB13] shadow-[00px_4px_6px_rgba(0,0,0,0.1)] border-b border-[#E6C200] z-50">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="flex items-center justify-center h-[93px] relative">
           <!-- Logo container -->
@@ -44,15 +44,74 @@
           
           <!-- Menu mobile (hamburger) pour responsivité - positionné à droite -->
           <div class="absolute right-0 md:hidden">
-            <button class="p-2 rounded-lg text-gray-900 hover:text-gray-700 hover:bg-yellow-300 transition-colors duration-200">
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+            <button 
+              @click="toggleMobileMenu"
+              class="p-2 rounded-lg text-gray-900 hover:text-gray-700 hover:bg-yellow-300 transition-colors duration-200 relative z-50"
+              :class="{ 'bg-yellow-300': isMobileMenuOpen }"
+            >
+              <!-- Icône hamburger / X -->
+              <div class="w-6 h-6 flex flex-col justify-center items-center space-y-1">
+                <span 
+                  class="block w-5 h-0.5 bg-current transition-all duration-300 ease-in-out"
+                  :class="isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''"
+                ></span>
+                <span 
+                  class="block w-5 h-0.5 bg-current transition-all duration-300 ease-in-out"
+                  :class="isMobileMenuOpen ? 'opacity-0' : ''"
+                ></span>
+                <span 
+                  class="block w-5 h-0.5 bg-current transition-all duration-300 ease-in-out"
+                  :class="isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''"
+                ></span>
+              </div>
             </button>
           </div>
         </div>
       </div>
-      
+
+      <!-- Menu mobile overlay -->
+      <div 
+        v-if="isMobileMenuOpen"
+        class="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+        @click="closeMobileMenu"
+      ></div>
+
+      <!-- Menu mobile -->
+      <div 
+        class="fixed top-[93px] right-0 w-80 h-[calc(100vh-93px)] bg-[#F5DB13] shadow-2xl transform transition-transform duration-300 ease-in-out z-40 md:hidden border-l border-[#E6C200]"
+        :class="isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'"
+      >
+        <!-- Contenu du menu -->
+        <div class="p-6 h-full flex flex-col">
+          <!-- Navigation links -->
+          <nav class="space-y-6">
+            <RouterLink 
+              to="/" 
+              @click="closeMobileMenu"
+              class="block w-full text-left px-4 py-3 text-xl font-bold text-gray-900 hover:text-gray-700 hover:bg-yellow-300 rounded-lg transition-all duration-200"
+              :class="{ 'bg-yellow-300 text-gray-700': route.path === '/' }"
+            >
+              Home
+            </RouterLink>
+            
+            <RouterLink 
+              to="/pokedex" 
+              @click="closeMobileMenu"
+              class="block w-full text-left px-4 py-3 text-xl font-bold text-gray-900 hover:text-gray-700 hover:bg-yellow-300 rounded-lg transition-all duration-200"
+              :class="{ 'bg-yellow-300 text-gray-700': route.path === '/pokedex' }"
+            >
+              Pokédex
+            </RouterLink>
+          </nav>
+
+          <!-- Decorative elements -->
+          <div class="flex-1 flex items-end justify-center pb-8">
+            <div class="text-center">
+              <p class="text-sm font-medium text-gray-700 opacity-70">Gotta catch 'em all!</p>
+            </div>
+          </div>
+        </div>
+      </div>
       
     </header>
     <main><RouterView /></main>
@@ -60,6 +119,31 @@
 </template>
 
 <script setup>
+import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
+
 const route = useRoute()
+const isMobileMenuOpen = ref(false)
+
+const toggleMobileMenu = () => {
+  isMobileMenuOpen.value = !isMobileMenuOpen.value
+}
+
+const closeMobileMenu = () => {
+  isMobileMenuOpen.value = false
+}
+
+// Fermer le menu quand on change de route
+watch(route, () => {
+  closeMobileMenu()
+})
+
+// Empêcher le scroll quand le menu est ouvert
+watch(isMobileMenuOpen, (isOpen) => {
+  if (isOpen) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = ''
+  }
+})
 </script>
