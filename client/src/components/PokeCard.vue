@@ -189,3 +189,4 @@ const getTypeColor = (type) => {
   outline-offset: 2px;
 }
 </style>
+
