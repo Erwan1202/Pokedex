@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <section class="space-y-6 my-6">
+    <section class="space-y-4 sm:space-y-6 my-4 sm:my-6">
       <header class="space-y-2" style="margin-top: min(4.69vh, 48px);">
         <h2 class="font-normal text-center text-black" 
             style="font-family: 'Karla', sans-serif; 
@@ -16,8 +16,8 @@
         />
       </header>
 
-      <div v-if="loading">Loading…</div>
-      <div v-else class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div v-if="loading" class="text-center py-8 text-gray-500">Loading…</div>
+      <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-5">
         <PokeCard v-for="p in pokemons" :key="p.id" :pokemon="p" @open="openModal" />
       </div>
 

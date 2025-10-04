@@ -1,23 +1,28 @@
 <template>
   <!-- Backdrop --> 
-  <div v-if="open" class="fixed inset-0 bg-black/50 backdrop-blur-sm" @click.self="$emit('close')"></div>
-
+  <div v-if="open" class="fixed top-0 left-0 w-screen h-screen bg-black/50 backdrop-blur-sm z-40" @click.self="$emit('close')"></div>
+      
   <!-- Modal Container-->
-  <div v-if="open" class="fixed inset-0 grid place-items-center">
-    <!-- X au-dessus du modal -->
-    <button @click="$emit('close')" 
-            class="absolute top-35 right-90 grid place-items-center w-10 h-10 rounded-full z-50">
-      <img src="../assets/Modal_assets/close.png" alt="Close Modal" class="w-6 h-6" />
-    </button>
-
+  <div v-if="open" class="fixed inset-0 flex items-center justify-center p-4 z-50">
+    <!-- X Button -->
+      <button @click="$emit('close')" 
+              class="absolute top-3 right-3 md:top-10 md:right-10
+                     grid place-items-center w-8 h-8 md:w-10 md:h-10 
+                     rounded-full
+                     transition-colors z-50">
+        <img src="../assets/Modal_assets/close.png" alt="Close Modal" 
+             class="w-4 h-4 md:w-6 md:h-6" />
+      </button>
     <!-- Modal -->
-    <div class="relative w-[50%] h-[50%] rounded-2xl overflow-hidden shadow-2xl"
+    <div class="relative w-full max-w-4xl h-full max-h-[90vh] sm:max-h-[80vh] md:h-auto md:max-h-[600px] 
+                rounded-2xl overflow-hidden shadow-2xl"
                 :style="{ background: p.gradient
           ? `linear-gradient(to bottom, #732119 0%, ${p.gradient[1]} 100%)`
           : p.color || '#D9D9D9' }">
 
-      <!-- Grill -->
-      <div class="grid grid-cols-[45%_1fr] h-full">
+
+      <!-- Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-[45%_1fr] h-full min-h-[500px]">
         
         <!-- Colonne IMAGE -->
         <div class="relative h-full"
@@ -118,6 +123,7 @@
 
 <script setup>
 import typeColors from '../../../serveur/data/typeColors.json'
+import Pokedex from '../pages/Pokedex.vue'
 
 defineProps({ open: Boolean, p: Object })
 defineEmits(['close'])

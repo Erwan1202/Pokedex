@@ -1,8 +1,9 @@
 <template>
-  <div class="w-full flex flex-col items-center">
-    <div class="w-[min(920px,88vw)] mx-auto">
+  <div class="w-full flex flex-col items-center px-4 sm:px-6 lg:px-8">
+    <div class="w-full max-w-2xl lg:max-w-4xl mx-auto">
       <div class="relative">
-        <svg class="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400"
+        <svg class="pointer-events-none absolute left-3 sm:left-4 lg:left-5 top-1/2 -translate-y-1/2 
+                    h-4 w-4 sm:h-5 sm:w-5 text-gray-400"
              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="11" cy="11" r="7"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -13,13 +14,15 @@
           @input="$emit('update:q', qLocal)"
           type="text"
           placeholder="Find your pokémon..."
-          class="w-full h-12 rounded-full bg-white pl-12 pr-5
-                 text-[17px] leading-none text-gray-700 placeholder-gray-400
-                 ring-1 ring-gray-200 focus:ring-2 focus:ring-gray-300 focus:outline-none
-                 shadow-[0_6px_16px_rgba(0,0,0,0.08)]"/>
+          class="w-full h-10 sm:h-11 lg:h-12 rounded-full bg-white 
+                 pl-10 sm:pl-11 lg:pl-12 pr-4 sm:pr-5
+                 text-sm sm:text-base lg:text-[17px] leading-none text-gray-700 placeholder-gray-400
+                 ring-1 ring-gray-200 hover:ring-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none
+                 shadow-sm hover:shadow-md focus:shadow-lg transition-all duration-200
+                 sm:shadow-[0_4px_12px_rgba(0,0,0,0.06)] lg:shadow-[0_6px_16px_rgba(0,0,0,0.08)]"/>
       </div>
 
-      <div class="mt-5 flex gap-3">
+      <div class="mt-3 sm:mt-4 lg:mt-5 flex flex-wrap gap-2 sm:gap-3 justify-center sm:justify-start">
         <FilterDropdown
           label="Type"
           :items="typeOptions"

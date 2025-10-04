@@ -16,7 +16,7 @@
         borderRadius: '6px',
         opacity: 1,
         background: pokemon.gradient 
-          ? `linear-gradient(to top, ${pokemon.gradient[0]} 0%, ${pokemon.gradient[1]} 100%)`
+          ? `linear-gradient(to bottom, ${pokemon.gradient[0]} 0%, ${pokemon.gradient[1]} 100%)`
           : pokemon.color || '#D9D9D9'
       }"
     >
@@ -141,8 +141,6 @@
 </template>
 
 <script setup>
-import typeColors from '../../../serveur/data/typeColors.json'
-
 defineProps({
   pokemon: {
     type: Object,
@@ -152,7 +150,27 @@ defineProps({
 
 // Fonction pour obtenir la couleur selon le type
 const getTypeColor = (type) => {
-  return typeColors[type.toLowerCase()] || typeColors.default
+  const typeColors = {
+    normal: '#A8A878',
+    fire: '#F08030',
+    water: '#5DADE2',
+    electric: '#F8D030',
+    grass: '#78C850',
+    ice: '#98D8D8',
+    fighting: '#C03028',
+    poison: '#00BCD4',
+    ground: '#E0C068',
+    flying: '#A890F0',
+    psychic: '#F85888',
+    bug: '#A8B820',
+    rock: '#B8A038',
+    ghost: '#705898',
+    dragon: '#7038F8',
+    dark: '#705848',
+    steel: '#B8B8D0',
+    fairy: '#EE99AC'
+  }
+  return typeColors[type.toLowerCase()] || '#68A090'
 }
 </script>
 
