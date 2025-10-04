@@ -13,7 +13,7 @@
 
     <!-- CONTENU DESKTOP -->
     <div class="relative z-40 h-full hidden lg:block">
-      <!-- === Bloc TEXTE (positions & tailles Figma) === -->
+      <!--Bloc TEXTE -->
       <div class="absolute left-[160px] top-[166px] w-[515px]">
         <!-- Titre sur 4 lignes -->
         <h1
@@ -86,7 +86,7 @@
 
     <!-- CONTENU MOBILE -->
     <div class="relative z-40 flex flex-col min-h-full lg:hidden">
-      <!-- ILLUSTRATION MOBILE (en haut) -->
+      <!-- ILLUSTRATION MOBILE -->
       <div class="relative flex-1 flex items-center justify-center pt-4 pb-6">
         <div class="relative w-full max-w-sm h-64">
           <!-- Nuages -->
@@ -115,7 +115,7 @@
         </div>
       </div>
 
-      <!-- TEXTE MOBILE (en bas) -->
+      <!-- TEXTE MOBILE -->
       <div class="px-6 pb-8 text-center">
         <!-- Titre mobile -->
         <h1 class="font-karla text-black tracking-[1px] leading-[0.9] antialiased">

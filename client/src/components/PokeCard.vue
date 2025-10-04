@@ -5,7 +5,7 @@
     @click="$emit('open', pokemon)"
   >
     
-    <!-- Carré coloré avec gradient et image -->
+    <!-- Carré coloré-->
     <section
       class="pokemon-gradient-box absolute z-20"
       :style="{
@@ -41,6 +41,7 @@
         padding: '0',
         fontSize: '18px',
         fontWeight: 'bold',
+        fontFamily: 'Karla, sans-serif',
         color: 'black',
         lineHeight: '1.2',
         textAlign: 'left',
@@ -67,6 +68,7 @@
           justifyContent: 'center',
           fontSize: '14px',
           fontWeight: 'bold',
+          fontFamily: 'Karla, sans-serif',
           color: 'black',
           marginBottom: '4px',
           boxShadow: '0 1px 3px rgba(0,0,0,0.08)'
@@ -76,6 +78,7 @@
         <div class="stat-label" :style="{
           fontSize: '11px',
           fontWeight: '600',
+          fontFamily: 'Karla, sans-serif',
           color: 'black',
           opacity: 0.9
         }">
@@ -95,6 +98,7 @@
           justifyContent: 'center',
           fontSize: '14px',
           fontWeight: 'bold',
+          fontFamily: 'Karla, sans-serif',
           color: 'black',
           marginBottom: '4px',
           boxShadow: '0 1px 3px rgba(0,0,0,0.08)'
@@ -104,6 +108,7 @@
         <div class="stat-label" :style="{
           fontSize: '11px',
           fontWeight: '600',
+          fontFamily: 'Karla, sans-serif',
           color: 'black',
           opacity: 0.9
         }">
@@ -128,6 +133,7 @@
           borderRadius: '12px',
           fontSize: '11px',
           fontWeight: '600',
+          fontFamily: 'Karla, sans-serif',
           backgroundColor: getTypeColor(type),
           color: 'white',
           boxShadow: '0 1px 3px rgba(0,0,0,0.2)',

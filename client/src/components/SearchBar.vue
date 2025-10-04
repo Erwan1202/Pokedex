@@ -14,6 +14,7 @@
           @input="$emit('update:q', qLocal)"
           type="text"
           placeholder="Find your pokémon..."
+          style="font-family: 'Karla', sans-serif;"
           class="w-full h-10 sm:h-11 lg:h-12 rounded-full bg-white 
                  pl-10 sm:pl-11 lg:pl-12 pr-4 sm:pr-5
                  text-sm sm:text-base lg:text-[17px] leading-none text-gray-700 placeholder-gray-400

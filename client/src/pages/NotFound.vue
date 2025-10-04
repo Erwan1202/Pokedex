@@ -22,7 +22,7 @@
       
       <!-- Texte -->
       <div class="mb-8">
-        <h1 class="text-4xl font-bold text-white mb-4">
+        <h1 class="text-4xl font-bold text-white mb-4" style="font-family: 'Karla', sans-serif;">
           The rocket team has won this time.
         </h1>
       </div>
@@ -31,6 +31,7 @@
       <RouterLink 
         to="/" 
         class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-3 rounded-lg transition-colors duration-200"
+        style="font-family: 'Karla', sans-serif;"
       >
         Return
       </RouterLink>

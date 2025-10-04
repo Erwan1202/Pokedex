@@ -3,6 +3,7 @@
     <button
       @click="toggle"
       type="button"
+      style="font-family: 'Karla', sans-serif;"
       class="h-8 sm:h-9 lg:h-10 px-3 sm:px-4 rounded-md bg-white text-gray-700 
              text-xs sm:text-sm font-medium
              ring-1 ring-gray-200 hover:ring-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none
@@ -29,7 +30,7 @@
             :checked="isChecked(opt.id)"
             @change="onChange(opt.id, $event.target.checked)"
             class="h-3 w-3 sm:h-4 sm:w-4 accent-gray-700"/>
-          <span class="text-xs sm:text-sm text-gray-700">{{ opt.label }}</span>
+          <span class="text-xs sm:text-sm text-gray-700" style="font-family: 'Karla', sans-serif;">{{ opt.label }}</span>
         </label>
       </div>
     </div>
