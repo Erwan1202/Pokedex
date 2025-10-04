@@ -1,17 +1,25 @@
 <template>
-  <section class="space-y-6 my-6">
-    <header class="space-y-2">
-      <h2 class="text-3xl font-extrabold">800 Pokemons for you to choose your favorite</h2>
-      <SearchBar :types="types" @update:q="q=$event" @update:type="type=$event" />
-    </header>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="space-y-6 my-6">
+      <header class="space-y-2" style="margin-top: min(4.69vh, 48px);">
+        <h2 class="font-normal text-center text-black" 
+            style="font-family: 'Karla', sans-serif; 
+                   font-size: min(2.78vw, 40px); 
+                   line-height: 1.2; 
+                   margin-bottom: min(2.34vh, 24px);">
+          800 <span class="font-black">Pokemons</span> for you to choose your favorite
+        </h2>
+        <SearchBar :types="types" @update:q="q=$event" @update:type="type=$event" />
+      </header>
 
-    <div v-if="loading">Loading…</div>
-    <div v-else class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      <PokeCard v-for="p in pokemons" :key="p.id" :pokemon="p" @open="openModal" />
-    </div>
+      <div v-if="loading">Loading…</div>
+      <div v-else class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <PokeCard v-for="p in pokemons" :key="p.id" :pokemon="p" @open="openModal" />
+      </div>
 
-    <PokeModal :open="!!selected" :p="selected" @close="selected=null"/>
-  </section>
+      <PokeModal :open="!!selected" :p="selected" @close="selected=null"/>
+    </section>
+  </div>
 </template>
 
 <script setup>

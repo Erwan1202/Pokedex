@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-[#F5DB13]">
+  <div class="min-h-screen" :class="route.name === 'Pokedex' ? 'bg-white' : 'bg-[#F5DB13]'">
     <!-- Header -->
     <header v-if="route.name !== 'NotFound'" class="relative bg-[#F5DB13] shadow-[00px_4px_6px_rgba(0,0,0,0.1)] border-b border-[#E6C200]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
