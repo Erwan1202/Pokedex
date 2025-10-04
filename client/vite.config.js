@@ -9,4 +9,10 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom'
   }
+  ,
+  server: {
+    proxy: {
+      '/sprites': 'http://localhost:5174'
+    }
+  }
 })

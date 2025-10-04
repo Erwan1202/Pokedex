@@ -1,25 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Bulbasaur",
-    "types": ["Grass", "Poison"],
-    "height": 0.7,
-    "weight": 6.9,
-    "abilities": ["Overgrow", "Chlorophyll"],
-    "sprite": "/sprites/bulbasaur.png",
-    "color": "#74CB48"
-  },
-  {
-    "id": 4,
-    "name": "Charmander",
-    "types": ["Fire"],
-    "height": 0.6,
-    "weight": 8.5,
-    "abilities": ["Blaze", "Solar Power"],
-    "sprite": "/sprites/charmander.png",
-    "color": "#F57D31"
-  },
-  {
     "id": 7,
     "name": "Squirtle",
     "types": ["Water"],
@@ -27,7 +7,13 @@
     "weight": 9.0,
     "abilities": ["Torrent", "Rain Dish"],
     "sprite": "/sprites/squirtle.png",
-    "color": "#6493EB"
+    "color": "#6493EB",
+    "stats": {
+      "attack": 48,
+      "defense": 65,
+      "speed": 43,
+      "hp": 44
+    }
   },
   {
     "id": 25,
@@ -37,7 +23,13 @@
     "weight": 6.0,
     "abilities": ["Static", "Lightning Rod"],
     "sprite": "/sprites/pikachu.png",
-    "color": "#F9CF30"
+    "color": "#F9CF30",
+    "stats": {
+      "attack": 55,
+      "defense": 40,
+      "speed": 90,
+      "hp": 35
+    }
   },
   {
     "id": 39,
@@ -47,47 +39,110 @@
     "weight": 5.5,
     "abilities": ["Cute Charm", "Competitive"],
     "sprite": "/sprites/jigglypuff.png",
-    "color": "#E79AA8"
+    "color": "#F5ACDC",
+    "stats": {
+      "attack": 45,
+      "defense": 20,
+      "speed": 20,
+      "hp": 115
+    }
   },
   {
-    "id": 52,
-    "name": "Meowth",
-    "types": ["Normal"],
-    "height": 0.4,
-    "weight": 4.2,
-    "abilities": ["Pickup", "Technician"],
-    "sprite": "/sprites/meowth.png",
-    "color": "#AAA67F"
+    "id": 156,
+    "name": "Quilava",
+    "types": ["Fire"],
+    "height": 0.9,
+    "weight": 19.0,
+    "abilities": ["Blaze", "Flash Fire"],
+    "sprite": "/sprites/quilava.png",
+    "color": "#FFA500",
+    "stats": {
+      "attack": 64,
+      "defense": 58,
+      "speed": 80,
+      "hp": 58
+    }
   },
   {
-    "id": 54,
-    "name": "Psyduck",
+    "id": 258,
+    "name": "Mudkip",
     "types": ["Water"],
-    "height": 0.8,
-    "weight": 19.6,
-    "abilities": ["Damp", "Cloud Nine"],
-    "sprite": "/sprites/psyduck.png",
-    "color": "#A7B723"
+    "height": 0.4,
+    "weight": 7.6,
+    "abilities": ["Torrent", "Damp"],
+    "sprite": "/sprites/mudkip.png",
+    "color": "#5090D6",
+    "stats": {
+      "attack": 70,
+      "defense": 50,
+      "speed": 40,
+      "hp": 50
+    }
   },
   {
-    "id": 133,
-    "name": "Eevee",
-    "types": ["Normal"],
-    "height": 0.3,
-    "weight": 6.5,
-    "abilities": ["Run Away", "Adaptability"],
-    "sprite": "/sprites/eevee.png",
-    "color": "#C3B091"
+    "id": 248,
+    "name": "Tyranitar",
+    "types": ["Rock", "Dark"],
+    "height": 2.0,
+    "weight": 202.0,
+    "abilities": ["Sand Stream", "Unnerve"],
+    "sprite": "/sprites/tyranitar.png",
+    "color": "#6F6F6F",
+    "stats": {
+      "attack": 134,
+      "defense": 110,
+      "speed": 61,
+      "hp": 100
+    }
   },
   {
-    "id": 143,
-    "name": "Snorlax",
-    "types": ["Normal"],
-    "height": 2.1,
-    "weight": 460.0,
-    "abilities": ["Immunity", "Thick Fat"],
-    "sprite": "/sprites/snorlax.png",
-    "color": "#A8A77A"
+    "id": 6,
+    "name": "Charizard",
+    "types": ["Fire", "Flying"],
+    "height": 1.7,
+    "weight": 90.5,
+    "abilities": ["Blaze", "Solar Power"],
+    "sprite": "/sprites/charizard.png",
+    "color": "#F57D31",
+    "stats": {
+      "attack": 84,
+      "defense": 78,
+      "speed": 100,
+      "hp": 78
+    }
+  },
+  {
+    "id": 668,
+    "name": "Pyroar",
+    "types": ["Fire", "Normal"],
+    "height": 1.5,
+    "weight": 81.5,
+    "abilities": ["Rivalry", "Unnerve"],
+    "sprite": "/sprites/pyroar.png",
+    "color": "#D2691E",
+    "stats": {
+      "attack": 68,
+      "defense": 72,
+      "speed": 106,
+      "hp": 86
+    }
+  }
+  ,
+  {
+    "id": 417,
+    "name": "Pachirisu",
+    "types": ["Electric"],
+    "height": 0.4,
+    "weight": 3.9,
+    "abilities": ["Run Away", "Pickup", "Volt Absorb"],
+    "sprite": "/sprites/pachirisu.png",
+    "color": "#A7DB8D",
+    "stats": {
+      "attack": 45,
+      "defense": 70,
+      "speed": 95,
+      "hp": 60
+    }
   }
 ]
 

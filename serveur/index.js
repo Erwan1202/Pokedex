@@ -14,9 +14,9 @@ app.use(express.json());
 // Servir les sprites (dossier public)
 app.use("/sprites", express.static(path.join(__dirname, "public", "sprites")));
 
-// Charger les données au démarrage
+// Fonction pour charger les données
 const dbPath = path.join(__dirname, "data", "pokemons.json");
-let POKEMONS = JSON.parse(fs.readFileSync(dbPath, "utf-8"));
+const loadPokemons = () => JSON.parse(fs.readFileSync(dbPath, "utf-8"));
 
 // Healthcheck
 app.get("/health", (req, res) => res.json({ ok: true }));
@@ -31,7 +31,7 @@ app.get("/health", (req, res) => res.json({ ok: true }));
 app.get("/api/pokemon", (req, res) => {
   const { q, type, limit, offset } = req.query;
 
-  let data = [...POKEMONS];
+  let data = [...loadPokemons()]; // Recharge les données à chaque requête
 
   if (q) {
     const s = q.toString().toLowerCase();
@@ -63,6 +63,7 @@ app.get("/api/pokemon", (req, res) => {
  */
 app.get("/api/pokemon/:id", (req, res) => {
   const id = Number(req.params.id);
+  const POKEMONS = loadPokemons(); // Recharge les données
   const p = POKEMONS.find(x => x.id === id);
   if (!p) return res.status(404).json({ error: "Not found" });
   res.json(p);
