@@ -8,6 +8,7 @@
     "abilities": ["Torrent", "Rain Dish"],
     "sprite": "/sprites/squirtle.png",
     "color": "#6493EB",
+    "gradient": ["#5BC7FA", "#35BAFF"],
     "stats": {
       "attack": 48,
       "defense": 65,
@@ -24,6 +25,7 @@
     "abilities": ["Static", "Lightning Rod"],
     "sprite": "/sprites/pikachu.png",
     "color": "#F9CF30",
+    "gradient": ["#F2CB07", "#F2B807"],
     "stats": {
       "attack": 55,
       "defense": 40,
@@ -40,6 +42,7 @@
     "abilities": ["Cute Charm", "Competitive"],
     "sprite": "/sprites/jigglypuff.png",
     "color": "#F5ACDC",
+    "gradient": ["#F89EAE", "#F4B5C1"],
     "stats": {
       "attack": 45,
       "defense": 20,
@@ -56,6 +59,7 @@
     "abilities": ["Blaze", "Flash Fire"],
     "sprite": "/sprites/quilava.png",
     "color": "#FFA500",
+    "gradient": ["#64D368", "#64D368"],
     "stats": {
       "attack": 64,
       "defense": 58,
@@ -72,6 +76,7 @@
     "abilities": ["Torrent", "Damp"],
     "sprite": "/sprites/mudkip.png",
     "color": "#5090D6",
+    "gradient": ["#5BC7FA", "#35BAFF"],
     "stats": {
       "attack": 70,
       "defense": 50,
@@ -88,6 +93,7 @@
     "abilities": ["Sand Stream", "Unnerve"],
     "sprite": "/sprites/tyranitar.png",
     "color": "#6F6F6F",
+    "gradient": ["#64D368", "#64D368"],
     "stats": {
       "attack": 134,
       "defense": 110,
@@ -104,6 +110,7 @@
     "abilities": ["Blaze", "Solar Power"],
     "sprite": "/sprites/charizard.png",
     "color": "#F57D31",
+    "gradient": ["#B23237", "#D93E30"],
     "stats": {
       "attack": 84,
       "defense": 78,
@@ -120,6 +127,7 @@
     "abilities": ["Rivalry", "Unnerve"],
     "sprite": "/sprites/pyroar.png",
     "color": "#D2691E",
+    "gradient": ["#B23237", "#D93E30"],
     "stats": {
       "attack": 68,
       "defense": 72,
@@ -137,6 +145,7 @@
     "abilities": ["Run Away", "Pickup", "Volt Absorb"],
     "sprite": "/sprites/pachirisu.png",
     "color": "#A7DB8D",
+    "gradient": ["#5BC7FA", "#35BAFF"],
     "stats": {
       "attack": 45,
       "defense": 70,
