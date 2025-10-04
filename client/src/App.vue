@@ -6,11 +6,13 @@
           
           <div class="absolute left-4 sm:left-6 lg:left-8 flex items-center">
             <div class="transform hover:scale-105 transition-transform duration-300 ease-in-out" style="margin-top: 14px;">
-              <img 
-                src="./assets/Header_assets/Logo.png" 
-                alt="Pokémon" 
-                class="drop-shadow-lg filter brightness-100 contrast-105 w-[120px] h-[48px] sm:w-[140px] sm:h-[56px] lg:w-[157px] lg:h-[63px]"
-              />
+              <RouterLink to="/">
+                <img 
+                  src="./assets/Header_assets/Logo.png" 
+                  alt="Pokémon" 
+                  class="drop-shadow-lg filter brightness-100 contrast-105 w-[120px] h-[48px] sm:w-[140px] sm:h-[56px] lg:w-[157px] lg:h-[63px]"
+                />
+              </RouterLink>
             </div>
           </div>
           

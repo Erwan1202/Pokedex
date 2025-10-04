@@ -46,7 +46,7 @@
 import { ref, watch } from 'vue'
 import FilterDropdown from './FilterDropDown.vue'
 
-defineEmits(['update:q', 'update:filters'])
+const emit = defineEmits(['update:q', 'update:filters'])
 
 const qLocal = ref('')
 
@@ -77,7 +77,6 @@ watch([selectedTypes, selectedAttack, selectedXP], () => {
     attack: selectedAttack.value,
     xp: selectedXP.value
   }
-  // @ts-ignore
   emit('update:filters', filters)
 }, { deep: true })
 </script>
