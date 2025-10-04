@@ -12,7 +12,7 @@
           v-model="qLocal"
           @input="$emit('update:q', qLocal)"
           type="text"
-          placeholder="Encuentra tu pokémon..."
+          placeholder="Find your pokémon..."
           class="w-full h-12 rounded-full bg-white pl-12 pr-5
                  text-[17px] leading-none text-gray-700 placeholder-gray-400
                  ring-1 ring-gray-200 focus:ring-2 focus:ring-gray-300 focus:outline-none
@@ -21,19 +21,19 @@
 
       <div class="mt-5 flex gap-3">
         <FilterDropdown
-          label="Tipo"
+          label="Type"
           :items="typeOptions"
           type="checkbox"
           v-model="selectedTypes"/>
 
         <FilterDropdown
-          label="Ataque"
+          label="Attack"
           :items="attackOptions"
           type="radio"
           v-model="selectedAttack"/>
 
         <FilterDropdown
-          label="Experiencia"
+          label="Experience"
           :items="xpOptions"
           type="radio"
           v-model="selectedXP"/>
@@ -59,12 +59,12 @@ const typeOptions = [
   { id: 'poison', label: 'Poison' },
 ]
 const attackOptions = [
-  { id: 'atk-desc', label: 'Mayor a menor' },
-  { id: 'atk-asc',  label: 'Menor a mayor' },
+  { id: 'atk-desc', label: 'High to low' },
+  { id: 'atk-asc',  label: 'Low to high' },
 ]
 const xpOptions = [
-  { id: 'xp-desc', label: 'Mayor a menor' },
-  { id: 'xp-asc',  label: 'Menor a mayor' },
+  { id: 'xp-desc', label: 'High to low' },
+  { id: 'xp-asc',  label: 'Low to high' },
 ]
 
 const selectedTypes  = ref([])
