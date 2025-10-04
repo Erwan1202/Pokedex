@@ -1,11 +1,9 @@
 <template>
   <div class="min-h-screen" :class="route.name === 'Pokedex' ? 'bg-white' : 'bg-[#F5DB13]'">
-    <!-- Header -->
     <header v-if="route.name !== 'NotFound'" class="relative bg-[#F5DB13] shadow-[00px_4px_6px_rgba(0,0,0,0.1)] border-b border-[#E6C200]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-center h-[93px] relative">
           
-          <!-- Logo container - Position absolue à gauche -->
           <div class="absolute left-4 sm:left-6 lg:left-8 flex items-center">
             <div class="transform hover:scale-105 transition-transform duration-300 ease-in-out" style="margin-top: 14px;">
               <img 
@@ -16,7 +14,6 @@
             </div>
           </div>
           
-          <!-- Navigation Desktop - Centrée -->
           <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8">
             <RouterLink 
               to="/" 
@@ -39,7 +36,6 @@
             </RouterLink>
           </nav>
           
-          <!-- Burger Menu - Position absolue à droite (responsive uniquement) -->
           <div class="absolute right-4 sm:right-6 lg:hidden">
             <button 
               @click="toggleMobileMenu" 
@@ -54,7 +50,6 @@
           </div>
         </div>
         
-        <!-- Mobile Menu -->
         <div 
           v-if="isMobileMenuOpen" 
           class="lg:hidden absolute top-full left-0 right-0 bg-[#F5DB13] border-t border-[#E6C200] shadow-lg z-50"

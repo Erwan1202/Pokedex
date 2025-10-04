@@ -9,7 +9,11 @@
                    margin-bottom: min(2.34vh, 24px);">
           800 <span class="font-black">Pokemons</span> for you to choose your favorite
         </h2>
-        <SearchBar :types="types" @update:q="q=$event" @update:type="type=$event" />
+
+        <SearchBar
+          @update:q="q = $event"
+          @update:filters="filters = $event"
+        />
       </header>
 
       <div v-if="loading">Loading…</div>
@@ -30,21 +34,30 @@ import PokeCard from '../components/PokeCard.vue'
 import PokeModal from '../components/PokeModal.vue'
 
 const API = import.meta.env.VITE_API_URL || 'http://localhost:5174'
+
+// recherche + filtres
 const q = ref('')
-const type = ref('')
+const filters = ref({ types: [], attack: null, xp: null })
+
 const pokemons = ref([])
 const loading = ref(false)
 const selected = ref(null)
 
 const types = ['Grass','Poison','Fire','Water','Electric','Normal','Bug','Flying','Fairy']
 
+// Gestion de la modal de détail
 function openModal(p){ selected.value = p }
 
 watchEffect(async () => {
   loading.value = true
   const params = {}
   if (q.value) params.q = q.value
-  if (type.value) params.type = type.value
+
+  const chosenTypes = filters.value?.types || []
+  if (Array.isArray(chosenTypes) && chosenTypes.length > 0) {
+    params.type = chosenTypes[0]
+  }
+
   const { data } = await axios.get(`${API}/api/pokemon`, { params })
   pokemons.value = data
   loading.value = false
