@@ -59,7 +59,7 @@
     "abilities": ["Blaze", "Flash Fire"],
     "sprite": "/sprites/quilava.png",
     "color": "#FFA500",
-    "gradient": ["#64D368", "#64D368"],
+    "gradient": ["#B23237", "#D93E30"],
     "stats": {
       "attack": 64,
       "defense": 58,
